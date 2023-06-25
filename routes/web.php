@@ -15,3 +15,7 @@ use App\Http\Controllers\client\HomeController;
 */
 
 Route::get('/',[HomeController::class,'index']);
+Route::prefix('admin')->group(function (){
+   Route::get('/',[HomeController::class,'index']);
+});
+
